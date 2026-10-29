@@ -5,8 +5,21 @@
     "title": "水下魔窟",
     "text": "格伦德尔之母藏身于黑暗的水底魔窟。你跳入湖中，潜水半日才看到了她的巢穴。四周浸泡着战士的骨骸，墙上挂满锈蚀的武器。她比她的儿子更强大，更古老，更充满仇恨。",
     "options": [
-      {"text": "检视周围的武器，寻找可用之物", "effects": {"智慧": 1}, "branch": "search"},
-      {"text": "直接发起攻击，趁她不备", "effects": {"荣耀": 1, "疯狂": 1}, "branch": "charge"}
+      {
+        "text": "检视周围的武器，寻找可用之物",
+        "effects": {
+          "智慧": 1
+        },
+        "branch": "search"
+      },
+      {
+        "text": "直接发起攻击，趁她不备",
+        "effects": {
+          "荣耀": 1,
+          "疯狂": 1
+        },
+        "branch": "charge"
+      }
     ]
   },
   {
@@ -17,21 +30,32 @@
     "options": [
       {
         "text": "奋力举起古剑，斩向她的颈项",
-        "effects": {"荣耀": 4, "力量": 1, "生命": -1},
-        "difficulty": 13,
-        "check_stat": "力量",
+        "effects": {
+          "荣耀": 4,
+          "力量": 1,
+          "生命": -1
+        },
         "fail_text": "古剑太重，你无法举起，她扑向了你。",
-        "fail_effects": {"生命": -2, "疯狂": 2},
+        "fail_effects": {
+          "生命": -2,
+          "疯狂": 2
+        },
         "branch": "ancient_sword",
-        "set_world_state": {"grendel_mother_slain": true, "ancient_sword_used": true}
+        "set_world_state": {
+          "grendel_mother_slain": true,
+          "ancient_sword_used": true
+        }
       },
       {
         "text": "引她追逐，用水流旋涡困住她",
-        "effects": {"智慧": 3, "疯狂": -1},
-        "difficulty": 12,
-        "check_stat": "智慧",
+        "effects": {
+          "智慧": 3,
+          "疯狂": -1
+        },
         "fail_text": "旋涡的力量不足，她挣脱了。",
-        "fail_effects": {"生命": -2},
+        "fail_effects": {
+          "生命": -2
+        },
         "branch": "tactics"
       }
     ]
@@ -44,11 +68,20 @@
     "options": [
       {
         "text": "带走盾牌，作为战利品",
-        "effects": {"荣耀": 1},
+        "effects": {
+          "荣耀": 1
+        },
         "branch": "take_shield",
         "grant_relic": "athena_shield"
       },
-      {"text": "留下财宝，只带走荣耀", "effects": {"荣耀": 2, "神恩": 2}, "branch": "honor"}
+      {
+        "text": "留下财宝，只带走荣耀",
+        "effects": {
+          "荣耀": 2,
+          "神恩": 2
+        },
+        "branch": "honor"
+      }
     ]
   }
 ]

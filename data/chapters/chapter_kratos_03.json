@@ -5,8 +5,22 @@
     "title": "宙斯的审判",
     "text": "奥林匹斯山颤抖着。宙斯站在王座上，闪电照亮了他愤怒的脸。\"我的儿子，\"他说——那两个字像刀一样割进你的心脏。\"你以为你能逃脱命运吗？奥林匹斯的毁灭者，是时候终结了。\"命运的三姐妹在旁低声窃笑。",
     "options": [
-      {"text": "质问宙斯为何欺骗你", "effects": {"荣耀": 1, "疯狂": 1}, "branch": "confront"},
-      {"text": "沉默，让愤怒替你说话", "effects": {"力量": 1, "疯狂": 2}, "branch": "silent_rage"}
+      {
+        "text": "质问宙斯为何欺骗你",
+        "effects": {
+          "荣耀": 1,
+          "疯狂": 1
+        },
+        "branch": "confront"
+      },
+      {
+        "text": "沉默，让愤怒替你说话",
+        "effects": {
+          "力量": 1,
+          "疯狂": 2
+        },
+        "branch": "silent_rage"
+      }
     ]
   },
   {
@@ -17,23 +31,40 @@
     "options": [
       {
         "text": "以希望之力（而非仇恨）终结这一切",
-        "effects": {"荣耀": 5, "疯狂": -3, "神恩": 3},
-        "difficulty": 18,
-        "check_stat": "力量",
+        "effects": {
+          "荣耀": 5,
+          "疯狂": -3,
+          "神恩": 3
+        },
         "fail_text": "希望的力量在仇恨面前几乎消散，宙斯的闪电击中了你。",
-        "fail_effects": {"生命": -3, "疯狂": 2},
+        "fail_effects": {
+          "生命": -3,
+          "疯狂": 2
+        },
         "branch": "hope",
-        "set_world_state": {"zeus_slain": true, "hope_released": true}
+        "set_world_state": {
+          "zeus_slain": true,
+          "hope_released": true
+        }
       },
       {
         "text": "用尽全部仇恨和力量，将他打倒",
-        "effects": {"力量": 3, "疯狂": 5, "神恩": -5, "荣耀": 2},
-        "difficulty": 15,
-        "check_stat": "力量",
+        "effects": {
+          "力量": 3,
+          "疯狂": 5,
+          "神恩": -5,
+          "荣耀": 2
+        },
         "fail_text": "宙斯的力量远超想象，你几乎精尽力竭。",
-        "fail_effects": {"生命": -2, "疯狂": 3},
+        "fail_effects": {
+          "生命": -2,
+          "疯狂": 3
+        },
         "branch": "rage_kill",
-        "set_world_state": {"zeus_slain": true, "world_destroyed": true}
+        "set_world_state": {
+          "zeus_slain": true,
+          "world_destroyed": true
+        }
       }
     ]
   },
@@ -45,11 +76,25 @@
     "options": [
       {
         "text": "将生命中最后的希望释放，赋予世界",
-        "effects": {"神恩": 5, "疯狂": -5, "荣耀": 3, "生命": -3},
+        "effects": {
+          "神恩": 5,
+          "疯狂": -5,
+          "荣耀": 3,
+          "生命": -3
+        },
         "branch": "redemption",
-        "set_world_state": {"kratos_redeemed": true}
+        "set_world_state": {
+          "kratos_redeemed": true
+        }
       },
-      {"text": "离开，寻找新的开始", "effects": {"荣耀": 2, "疯狂": -2}, "branch": "exile"}
+      {
+        "text": "离开，寻找新的开始",
+        "effects": {
+          "荣耀": 2,
+          "疯狂": -2
+        },
+        "branch": "exile"
+      }
     ]
   }
 ]

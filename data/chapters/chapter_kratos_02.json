@@ -5,8 +5,22 @@
     "title": "海神的王座",
     "text": "波塞冬骑着海浪兽从天而降，大地震颤。\"你以为你能杀死神明？\"他狂笑道，海水淹没了半个王国。他是第一位阻拦你的奥林匹斯神明。怒火在你的血液中燃烧——海神，今日便是你的末日。",
     "options": [
-      {"text": "等待波塞冬靠近，寻找破绽", "effects": {"智慧": 1, "疯狂": 1}, "branch": "wait"},
-      {"text": "直接冲向他的海浪兽", "effects": {"力量": 1, "疯狂": 2}, "branch": "charge"}
+      {
+        "text": "等待波塞冬靠近，寻找破绽",
+        "effects": {
+          "智慧": 1,
+          "疯狂": 1
+        },
+        "branch": "wait"
+      },
+      {
+        "text": "直接冲向他的海浪兽",
+        "effects": {
+          "力量": 1,
+          "疯狂": 2
+        },
+        "branch": "charge"
+      }
     ]
   },
   {
@@ -17,23 +31,38 @@
     "options": [
       {
         "text": "亲手了结波塞冬，用双手",
-        "effects": {"力量": 2, "疯狂": 3, "神恩": -3},
-        "difficulty": 15,
-        "check_stat": "力量",
+        "effects": {
+          "力量": 2,
+          "疯狂": 3,
+          "神恩": -3
+        },
         "fail_text": "神明的余力超出预料，他挣脱了你的手。",
-        "fail_effects": {"生命": -2, "疯狂": 2},
+        "fail_effects": {
+          "生命": -2,
+          "疯狂": 2
+        },
         "branch": "bare_hands",
-        "set_world_state": {"poseidon_slain": true, "first_god_killed": true}
+        "set_world_state": {
+          "poseidon_slain": true,
+          "first_god_killed": true
+        }
       },
       {
         "text": "用混沌之刃刺穿他，快而干净",
-        "effects": {"力量": 1, "疯狂": 2, "神恩": -2},
-        "difficulty": 12,
-        "check_stat": "力量",
+        "effects": {
+          "力量": 1,
+          "疯狂": 2,
+          "神恩": -2
+        },
         "fail_text": "混沌之刃被海水腐蚀，力量不足。",
-        "fail_effects": {"生命": -1, "疯狂": 1},
+        "fail_effects": {
+          "生命": -1,
+          "疯狂": 1
+        },
         "branch": "blade",
-        "set_world_state": {"poseidon_slain": true}
+        "set_world_state": {
+          "poseidon_slain": true
+        }
       }
     ]
   },
@@ -45,11 +74,21 @@
     "options": [
       {
         "text": "收集波塞冬的神器",
-        "effects": {"神恩": -1, "力量": 2},
+        "effects": {
+          "神恩": -1,
+          "力量": 2
+        },
         "branch": "loot",
         "grant_relic": "madness_crown"
       },
-      {"text": "不需要战利品，继续前行", "effects": {"荣耀": 2, "疯狂": -1}, "branch": "advance"}
+      {
+        "text": "不需要战利品，继续前行",
+        "effects": {
+          "荣耀": 2,
+          "疯狂": -1
+        },
+        "branch": "advance"
+      }
     ]
   }
 ]
